@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Enrollment Form</title>
+	</head>
+		<body bgcolor= "lightblue">
+			<h1 style="color:blue; font-size:35px;"> <center>Enrollment Form</center> </h1>
+
+<center>
+			<form class="gedaria"action="#" method="post">
+			{% csrf_token %}
+				
+<hr>
+<br>
+<br>
+<center><div id="login">
+  <h3 id="log">Log In User</h3>
+   <input type ="radio" id="stud" name="stud" value="First"required>Student
+   <br>
+   <br>
+   <input type ="radio" id="teach" name="teach" value="Second"required>Teacher
+  </div><br><br></center>
+
+				<input type="submit" name="login" onclick="myFunction()" value="Login"style="color:red;">
+
+<!-- <script>function myFunction() {alert("Enrolled Successfully!");}
+
+</script> -->
+
+<center>
+<table id="idListTable">
+</form>
+</center>
+</body>
+</html>

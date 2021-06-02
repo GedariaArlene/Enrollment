@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Enrollment Form</title>
+	</head>
+		<body bgcolor= "lightblue">
+			<h1 style="color:blue; font-size:35px;"> <center>Enrollment Form</center> </h1>
+
+<center>
+			<form class="gedaria"action="#" method="post">
+			{% csrf_token %}
+				
+<hr>
+<br>
+<br>
+				<b><label for="Grade_Level" id="glabel1">Grade Level:</label><b>
+				<input bold type="text" id="gradelevel" name="gradelevel" placeholder= "Grade Level">
+<br>
+<br>		
+				<label for="Name" id="glabel2">Name:</label>
+				<input bold type="text" id="name" name="name" placeholder= "Name (SN, FN, M)">			
+<br>
+<br>
+				<b><label for="LRN" id="glabel3">LRN:</label><b>
+				<input bold type="text" id="lrn" name="lrn" placeholder= "Learner Reference Number">
+<br>
+<br>
+				<label for="Birthday" id="glabel4">Birthday:</label>
+				<input bold type="text" id="birthday" name="birthday" placeholder= "Birthday (M/D/Y)">
+<br>
+<br>
+				<label for="Address" id="glabel5">Address:</label>
+				<input bold type="text" id="address" name="address" placeholder="Address"></left><br><br><br>
+				<input type="submit" name="enroll" onclick="myFunction()" value="Enroll"style="color:red;">
+</iframe>
+<!-- <script>function myFunction() {alert("Enrolled Successfully!");}
+
+</script> -->
+
+<center>
+<table id="idListTable">
+</form>
+</center>
+</body>
+</html>

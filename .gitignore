@@ -1,0 +1,15 @@
+db.sqlite3
+geckodriver.log
+__pycache__
+*.pyc_
+*.pyc_
+*.pyc_/*.cmake/*.DS_Store/.user
+db.sqlite3-journal
+media
+static
+
+db.sqlite3
+geckodriver.log
+__pycache__
+*.pyc
+*.pyc/*.cmake/*.DS_Store/.user

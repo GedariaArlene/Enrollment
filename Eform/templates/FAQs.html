@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artify Graphics</title>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="external.css">
+<link rel="stylesheet" href="Schools.css">
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: 1500px 2500px;
+}
+/*allign*/
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*!Clickable button*/
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+img {
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  object-fit: fill;}
+
+
+/* Header */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 20px;
+}
+
+/* Page Content */
+.content {padding:10px;}
+
+
+
+</style>
+</head>
+
+<body class="w3-theme-l5" style="background-image: url(BG.jpg)">
+
+<div class="header">
+  <h1>Frequently Ask Questions</h1>
+</div>
+
+<ul class="menu">
+       <li><a href="C:\Users\Home\Desktop\Webdev\Homepage.html"><i class="fa fa-home"> &nbsp; &nbsp;HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+        <ul class="submenu">
+            <li><a href="C:\Users\Home\Desktop\Webdev\About.html"><i class="fa fa-cloud">&nbsp; About</i></a></li>
+            <li><a href="C:\Users\Home\Desktop\Webdev\Services.html"><i class="fa fa-laptop">&nbsp;Services</i></a></li>
+            <li><a href="C:\Users\Home\Desktop\Webdev\FAQs.html"><i class="fa fa-user">&nbsp; FAQs</i></a></li>
+        </ul>
+   </li>
+</ul>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:5px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center"><b>My Profile</b></h4>
+         <h4 class="w3-center"><img src="elyssa.png" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></h4>
+         <hr>
+      
+        </div>
+      </div>
+               
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">Post your questions here</h6>
+              <h6 contenteditable="true" class="w3-border w3-padding">What's on your mind?</h6>
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="alvin.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">1 min</span>
+       <h4><b>Alvin Lozada. </b><i>    &nbsp; &nbsp;      How much is the cost for brochure printing like this?</i></h4><br>
+<div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+              <img src="brochure.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+              <img src="inner.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+          </div>
+        </div>
+        <hr class="w3-clear">
+        <h4>The printing cost may vary to the kind of print. </h4>
+
+          
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>
+   
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="elyssa.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">16 min</span>
+        <h4><b>Elyssa. </b><i>    &nbsp; &nbsp;      Are you open on Sunday?</i></h4><br>
+        <hr class="w3-clear">
+        <h4>We are open Mondays-Saturday 8:00-5:00PM</h4>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>  
+
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="elyssa.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">32 min</span>
+        <h4><b>Angie. </b><i>    &nbsp; &nbsp;      Do you open print on sintra board?</i></h4><br>
+        <hr class="w3-clear">
+        <h4>This is the sample layout</h4>
+        <img src="Invitation.png" style="width:100%"
+      </div> 
+
+<class="w3-margin-bottom">
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+      
+
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="elyssa.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">48 min</span>
+        <h4><b>Patricia. </b><i>    &nbsp; &nbsp;      Is there an extra charge for layout fee of tarpaulin?</i></h4><br>
+        <hr class="w3-clear">
+        <h4>Yes, layout fee cost 150 pesos only.</h4>
+        <img src="" style="width:100%"
+      </div> 
+
+<class="w3-margin-bottom">
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+
+    <!-- End Middle Column -->
+    </div>
+    
+    
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+
+</div>
+
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-14 w3-opacity w3-hover-opacity-off">
+  <a href="FAQs.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.snapchat.com/"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+    <a href="https://www.pinterest.ph/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+
+</footer>
+
+</div>
+</body>
+</html>

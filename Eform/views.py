@@ -1,4 +1,4 @@
-#from django.http import HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .models import Student, Teacher, Requirements, ClassShift, Schedule, Specialization, StudentProfile
 # Create your views here.

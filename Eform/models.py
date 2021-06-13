@@ -5,10 +5,10 @@ from django.db import models
 class Student(models.Model):
 #	enroll = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)
 	name = models.CharField(max_length=30, null=True)
-	gradelevel = models.CharField(max_length=30, null=True)
-	lrn = models.CharField(max_length=11, null=True)
+	gradelevel = models.IntegerField(max_length=30, null=True)
+	lrn = models.IntegerField(max_length=11, null=True)
 	address = models.CharField(max_length=30, null=True)
-	birthday = models.CharField(max_length=30, null=True)
+	birthday = models.IntegerField(max_length=30, null=True)
 
 	def __str__(self):
 		return str(self.name)

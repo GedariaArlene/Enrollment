@@ -20,7 +20,7 @@ class Teacher(models.Model):
 
 	name = models.CharField(max_length=30, null=True)
 	faculty = models.CharField(max_length=11, null=True)
-	yearlevel = models.CharField(max_length=30, null=True)
+	yearlevel = models.IntegerField(max_length=30, null=True)
 	section = models.CharField(max_length=30, null=True)
 
 	def __str__(self):
@@ -31,8 +31,8 @@ class Requirements(models.Model):
 
 	require = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)
 
-	reportcard = models.FileField(default="")
-	psa = models.FileField(default="")
+	reportcard = models.FileField(default='none', blank=True)
+	psa = models.FileField(default='none', blank=True)
 
 	def __str__(self):
 		return str(self.reportcard)
@@ -56,7 +56,7 @@ class Schedule(models.Model):
 	scheds = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)
 	
 	name = models.CharField(max_length=30, null=True)
-	gradelevel = models.CharField(max_length=30, null=True)
+	gradelevel = models.IntegerField(max_length=30, null=True)
 
 	def __str__(self):
 		return str(self.name)
@@ -84,8 +84,8 @@ class StudentProfile(models.Model):
 	profile = models.ForeignKey(Teacher, default=None, on_delete=models.CASCADE, null=True)
 	
 	name = models.CharField(max_length=30, null=True)
-	age = models.CharField(max_length=11, null=True)
-	birthday = models.CharField(max_length=30, null=True)
+	age = models.IntegerField(max_length=11, null=True)
+	birthday = models.IntegerField(max_length=30, null=True)
 	address = models.CharField(max_length=30, null=True)
 	mothersname = models.CharField(max_length=30, null=True)
 	Occupation1 = models.CharField(max_length=30, null=True)

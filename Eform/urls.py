@@ -5,8 +5,8 @@ urlpatterns = [
 	path ('',views.EStudent),
 	path('students', views.Page, name="students"),
 
-	path ('',views.Page),
-	path('requirement', views.Requirements, name="requirement"),
+	#path ('',views.Page),
+	#path('requirement', views.Requirements, name="requirement"),
 
 ]
 

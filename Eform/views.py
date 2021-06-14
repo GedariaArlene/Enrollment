@@ -38,8 +38,6 @@ def Page(request):
 
 
 
-
-
 def Requirements(request):
 
 	if request.method == 'POST':
@@ -50,7 +48,7 @@ def Requirements(request):
 			psa = request.POST['psa'],
 			)
 
-		return redirect('shifts.html')
+		return redirect('students.html')
 
 		abg = Requirements()
 		abg.reportcard = reportcard
@@ -62,7 +60,7 @@ def Requirements(request):
 def Page(request):
 
 	abg = Requirements.objects.all().order_by('reportcard')
-	return render(request,'shifts.html', {'abg': abg})
+	return render(request,'requirement.html', {'abg': abg})
 
 
 

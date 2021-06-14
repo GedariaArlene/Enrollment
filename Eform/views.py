@@ -79,7 +79,7 @@ def ClassShift(request):
 		return redirect('schedule.html')
 
 		abg = ClassShift()
-		abg.cshifts = reportcard
+		abg.cshifts = cshifts
 		abg.save()
 		
 	return render(request,'schedule.html')

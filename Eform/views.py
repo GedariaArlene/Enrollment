@@ -61,7 +61,7 @@ def Requirements(request):
 
 def Page(request):
 
-	abg = Requirements.objects.all().order_by('name')
+	abg = Requirements.objects.all().order_by('reportcard')
 	return render(request,'shifts.html', {'abg': abg})
 
 
@@ -86,7 +86,7 @@ def ClassShift(request):
 
 def Page(request):
 
-	abg = ClassShift.objects.all().order_by('name')
+	abg = ClassShift.objects.all().order_by('cshifts')
 	return render(request,'schedule.html', {'abg': abg})
 
 

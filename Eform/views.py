@@ -34,6 +34,72 @@ def Page(request):
 
 	abg = Student.objects.all().order_by('name')
 	return render(request,'students.html', {'abg': abg})
+
+
+
+
+
+
+def Requirements(request):
+
+	if request.method == 'POST':
+
+		require = Requirements.objects.create()
+		Requirements.objects.create(
+			reportcard = request.POST['reportcard'], 
+			psa = request.POST['psa'],
+			)
+
+		return redirect('shifts.html')
+
+		abg = Requirements()
+		abg.reportcard = reportcard
+		abg.psa = psa
+		abg.save()
+
+	return render(request,'students.html')
+
+def Page(request):
+
+	abg = Requirements.objects.all().order_by('name')
+	return render(request,'shifts.html', {'abg': abg})
+
+
+
+
+def ClassShift(request):
+
+	if request.method == 'POST':
+
+		classshift = ClassShift.objects.create()
+		ClassShift.objects.create(
+			cshifts = request.POST['cshifts'], 
+			)
+
+		return redirect('schedule.html')
+
+		abg = ClassShift()
+		abg.cshifts = reportcard
+		abg.save()
+		
+	return render(request,'schedule.html')
+
+def Page(request):
+
+	abg = ClassShift.objects.all().order_by('name')
+	return render(request,'schedule.html', {'abg': abg})
+
+
+
+
+
+
+
+
+
+
+
+
 	
 '''
 def Page(request):
@@ -49,21 +115,20 @@ def Page(request):
 
 
 
-def Third(request):
+def EStudent(request):
 
-	officerId=officer.objects.create(
-		firstname = request.POST['name'],
-		middle = request.POST['middle'],
-		surname = request.POST['sur'],
-		course = request.POST['course'],
-		section = request.POST['year'],
-		number = request.POST['number'],
-		email = request.POST['email'],
-		gender = request.POST['gender'],
-		today = request.POST['birthday'],
-		)
-	return render(request,'.html')
+	if request.method == 'POST':
 
+		enroll = Student.objects.create()
+		Student.objects.create(
+			name = request.POST['name'], 
+			gradelevel = request.POST['gradelevel'],
+			lrn = request.POST['lrn'],
+			birthday = request.POST['birthday'], 
+			address = request.POST['address'],
+			)
+
+		return redirect('students')
 
 def Fourth(request):
 

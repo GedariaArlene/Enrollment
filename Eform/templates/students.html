@@ -23,6 +23,12 @@ table, td, th {
   margin: 1px 2px;
   cursor: pointer;
 }
+
+.top-right {
+  position: relative;
+  top: 9%;
+  left: 40%;
+}
 </style>
 </head>
 
@@ -31,6 +37,7 @@ table, td, th {
 <!--BUTTONS-->
  <!--<img src="AG.png"-->
   <h1><center><strong>LIST OF ENROLLED STUDENT</strong><center/></h1>
+  <div class="top-right"><h3><center><strong>Total:</strong></center></h3></div>
 </div>
 </div>
 <style="border:0px solid black">
@@ -50,7 +57,6 @@ table, td, th {
 <center>
 
 <table style="width: 70%">
-
   		<tr>
  		    <th>{{ forloop.counter }}</th>		
 		    <th>Gradelevel</th>
@@ -72,7 +78,6 @@ table, td, th {
 		    <td><center>{{ abg.address }}</center></td>
             <td><center><button><a style="color:red;" href="static/admin/templates/requirement.html">Attach Now</a></button></center></td>
   		</tr>
-
 </div>
 	{% endfor %}
 </table>

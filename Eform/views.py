@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .models import Student, Teacher, Requirements, ClassShift, Schedule, Specialization, StudentProfile
+from .models import Student, Requirements, ClassShift, Schedule, Specialization, StudentProfile
 # Create your views here.
 
 
@@ -30,14 +30,35 @@ def EStudent(request):
 
 	return render(request,'EStudent.html')
 
-def Page(request):
+def List(request):
 
 	abg = Student.objects.all().order_by('name')
 	return render(request,'students.html', {'abg': abg})
 
 
+def Require(request):
+
+	return render(request,'requirement.html')
+
+def Special(request):
+
+	return render(request,'specialization.html')
+
+def Shift(request):
+
+	return render(request,'shifts.html')
 
 
+def Sched(request):
+
+	return render(request,'schedule.html')
+
+
+
+
+
+
+'''
 def Requirements(request):
 
 	if request.method == 'POST':
@@ -99,19 +120,19 @@ def Page(request):
 
 
 	
-'''
+
 def Page(request):
 	#return render(request,'students.html')
 
 	#return render(request,'students.html', {'abg': abg})
 
 	abg = Item.objects.all().order_by('gradelevel')
-	return render(request,'students.html', {'abg': abg})
+	return render(request,'students.html', {'abg': abg})'''
 
 
 
 
-
+'''
 
 def EStudent(request):
 

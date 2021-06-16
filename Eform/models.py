@@ -14,18 +14,6 @@ class Student(models.Model):
 		return str(self.name)
 		#return self.name 
 
-#Info ni Teacher	
-class Teacher(models.Model):
-#	teacher = models.ForeignKey(Teacher, default=None, on_delete=models.CASCADE, null=True)
-
-	name = models.CharField(max_length=30, null=True)
-	faculty = models.CharField(max_length=11, null=True)
-	yearlevel = models.IntegerField(max_length=30, null=True)
-	section = models.CharField(max_length=30, null=True)
-
-	def __str__(self):
-		return str(self.name)
-		#return self.name
 
 class Requirements(models.Model):
 
@@ -81,7 +69,7 @@ class Specialization(models.Model):
 
 class StudentProfile(models.Model):
 
-	profile = models.ForeignKey(Teacher, default=None, on_delete=models.CASCADE, null=True)
+	profile = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)
 	
 	name = models.CharField(max_length=30, null=True)
 	age = models.IntegerField(max_length=11, null=True)
@@ -91,7 +79,6 @@ class StudentProfile(models.Model):
 	Occupation1 = models.CharField(max_length=30, null=True)
 	fathersname = models.CharField(max_length=30, null=True)
 	occupation2 = models.CharField(max_length=30, null=True)
-	mothersname = models.CharField(max_length=30, null=True)
 
 	def __str__(self):
 		return str(self.name)
@@ -159,3 +146,18 @@ class Item(models.Model):
 
 	def __str__(self):
 		return self.gradelevel'''
+
+
+'''
+#Info ni Teacher	
+class Teacher(models.Model):
+#	teacher = models.ForeignKey(Teacher, default=None, on_delete=models.CASCADE, null=True)
+
+	name = models.CharField(max_length=30, null=True)
+	faculty = models.CharField(max_length=11, null=True)
+	yearlevel = models.IntegerField(max_length=30, null=True)
+	section = models.CharField(max_length=30, null=True)
+
+	def __str__(self):
+		return str(self.name)
+		#return self.name'''

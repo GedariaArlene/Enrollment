@@ -1,9 +1,7 @@
 <html>
 	<head>
 		<title> Form</title>
-	</head>
 
-<body bgcolor= "lightblue">
 <!--BUTTONS-->
 <link rel="stylesheet" href="static/admin/css/menu.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,27 +12,56 @@ footer {
   padding: 1px;
   background-color: DarkSalmon;
   color: white;}
+
+
+/* Header */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 20px;
+  font-family: Arial;}
+
+
+
 </style>
+	</head>
+<body bgcolor= "lightblue">
 
-
-<div class="header"><br>
- <!--<img src="AG.png"-->
-  <h1><center><strong>ENROLLMENT</strong><center/></h1>
+<div class="header"> 
+   <h1>ENROLLMENT </h1>
 </div>
 </div>
 <style="border:0px solid black">
    <ul class="menu">
-       <li><a href="C:\Users\Home\Desktop\Webdev\Homepage.html"><i>&nbsp;&nbsp;HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+       <li><a href="C:\Users\Home\Desktop\Webdev\Estudent.html"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H O M E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i></a>
         <ul class="submenu">
-            <li><a href="\home\arlene\ArleneList\Eform\About.html"><i>&nbsp; About</i></a></li>
-            <li><a href="\home\arlene\ArleneList\Eform\Services.html"><i>&nbsp;Services</i></a></li>
-            <li><a href="\home\arlene\ArleneList\Eform\FAQs.html"><i>&nbsp; FAQs</i></a></li>
+            <li><a href="home/arlene/ArleneList/Eform/Templates/students.html"><i>  Masterlist</i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\requirements.html"><i> Requirements</i></a></li>
+            <li><a href="http://enrollment.ph/home/arlene/ArleneList/Eform/Templates/schedule.html"><i> Schedule </i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\specilization.html"><i> Specilization </i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\teacher.html"><i>  Teacher</i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\sections.html"><i> Profile </i></a></li>
+
+
+            
+
         </ul></li>
 
-
-<hr>
+ 
 <br>
 
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      
+
+ 
 <center>
 			<form class="gedaria"action="#" method="post">
 			{% csrf_token %}
@@ -63,23 +90,33 @@ footer {
 <!-- <script>function myFunction() {alert("Enrolled Successfully!");}
 
 </script> -->
+</div>
 
 <center>
 <table id="idListTable">
 </form>
 </center>
+</div>
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+  
+</div> </div> 
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-7 w3-opacity w3-hover-opacity-off">
+<footer class="w3-center w3-black w3-padding-14 w3-opacity w3-hover-opacity-off">
   <a href="Estudent.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-large w3-section">
-   <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <a href="https://www.snapchat.com/"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
     <a href="https://www.pinterest.ph/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
     <a href="https://twitter.com/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>  
   </div>
 </footer>
 

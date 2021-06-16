@@ -1,18 +1,259 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
+<link rel="stylesheet" href="static/admin/css/menu.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/admin/css/Schools.css">
+<style>
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: DarkSalmon;
+  color: white;}
 
-	<center><h1>Class Schedule</h1>
+
+/* Header */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 20px;
+  font-family: Arial;}
+
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    height: 55px;
+}
+.menu li {
+    background: -moz-linear-gradient(#012C46, #025E95);
+    background: -ms-linear-gradient(#012C46, #025E95);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #C0C0C0));
+    background: -webkit-linear-gradient(#012C46, ##025E95);
+    background: -o-linear-gradient(#012C46, #025E95);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008080', endColorstr='#025E95');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='##990043', endColorstr='#025E95')";
+    background: linear-gradient(#012C46, #025E95);
+    border-bottom: 2px solid ##012C46;
+    border-top: 1px solid #012C46;
+    min-width: 1px;
+}
+.menu > li {
+    display: block;
+    float: left;
+    position: relative;
+}
+.menu > li:first-child {
+    border-radius: 2px 0 0;
+}
+.menu a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: white;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 24px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu li:hover {
+    background-color: #1c1c1c;
+    background: -moz-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -ms-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1c1c), color-stop(100%, #1b1b1b));
+    background: -webkit-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -o-linear-gradient(#1c1c1c, #1b1b1b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b')";
+    background: linear-gradient(#1c1c1c, #1b1b1b);
+    border-bottom: 2px solid #222222;
+    border-top: 2px solid #1B1B1B;
+}
+.menu li:hover > a {
+    border-radius: 5px 0 0 0;
+    border-left: 3px solid gray;
+    color: white;
+}
+/* submenu styles */
+.submenu {
+    left: 0;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+.menu .submenu li:hover a {
+    border-left: 3px light gray;
+    border-radius: 0;
+    color: #ffffff;
+}
+.menu > li:hover .submenu, .menu > li:focus .submenu {
+    max-height: 2000px;
+    z-index: 5;
+}
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+/* CSS3 delays for transition effects */
+.menu li:hover .submenu li:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu li:hover .submenu li:nth-child(2) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+.menu li:hover .submenu li:nth-child(3) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+.menu li:hover .submenu li:nth-child(4) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+.menu li:hover .submenu li:nth-child(5) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.submenu li:nth-child(1) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+.submenu li:nth-child(2) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+.submenu li:nth-child(3) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+.submenu li:nth-child(4) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.submenu li:nth-child(5) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+<!--Hoverable Button-->
+<!--Client&Contact-->
+
+.button {
+  background-color: red; /* Green */
+  border: none;
+  color: red;
+  padding: none;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 2;
+  margin: 1px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-transform: lowercase;
+  font-family: 'Lucida Console';
+}
+
+
+
+</style>
+    </head>
+<body bgcolor= "lightblue">
+
+<div class="header"> 
+   <h1>ENROLLMENT </h1>
+</div>
+ <br>
+ <br>
+ <style="border:0px solid black">
+   <ul class="menu">
+       <li><a href="C:\Users\Home\Desktop\Webdev\Estudent.html"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H O M E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i></a>
+        <ul class="submenu">
+            <li><a href="home/arlene/ArleneList/Eform/Templates/students.html"><i>  Masterlist</i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\requirements.html"><i> Requirements</i></a></li>
+            <li><a href="http://enrollment.ph/home/arlene/ArleneList/Eform/Templates/schedule.html"><i> Schedule </i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\specilization.html"><i> Specilization </i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\teacher.html"><i>  Teacher</i></a></li>
+            <li><a href="\home\arlene\ArleneList\Eform\Templates\sections.html"><i> Profile </i></a></li>
+            
+        </ul></li>
+
+ 
+<br>
 
     <form method="post" action="" id="myfrm" >
         <fieldset>
             <legend>Your Schedule:</legend>
-            First name:
+            <center>First name:
             <input type="text" name="firstname" id="fn">
             &nbsp;&nbsp;&nbsp;Last name:
             <input type="text" name="lastname" id="ln">
-            <br><br>
+            <br><br></center>
 
 
     <table border="5" cellspacing="0" align="center"><br>
@@ -128,10 +369,11 @@
             </td>
             <td align="center" height="50">SPORTS</td>
         </tr>
-    </table><br><br><br>
+    </table><br><br>
 			
 
     <p align="center"><input type="button" onclick="myPrint('myfrm')" value="print"></p>
+    <button><a href="Estudent.html.html">Done</a></button>
     <script>
         function myPrint(myfrm) {
             var printdata = document.getElementById(myfrm);
@@ -141,9 +383,10 @@
             newwin.close();
         }
     </script>
-                <input type="submit" value="Submit">
-    </form>
-    </fieldset>
+<br>   
+       
+</form>
+</fieldset>
 </center>
 
 

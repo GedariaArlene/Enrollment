@@ -26,8 +26,6 @@ class Requirements(models.Model):
 		return str(self.reportcard)
 		#return self.reportcard
 
-
-#Students_Specialization
 class Specialization(models.Model):
 
 	specialz = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)
@@ -45,8 +43,6 @@ class Specialization(models.Model):
 		return str(self.firstchoice)
 		#return self.firstchoice
 
-
-#Students_Specialization
 class Modality(models.Model):
 
 	modals = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)
@@ -61,8 +57,6 @@ class Modality(models.Model):
 	def __str__(self):
 		return str(self.modality)
 
-
-#Students_Schedules
 class Schedule(models.Model):
 
 	scheds = models.ForeignKey(Student, default=None, on_delete=models.CASCADE, null=True)

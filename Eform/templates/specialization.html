@@ -1,9 +1,11 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Enrollment Form</title>
+<meta name="viewport" content="device=width-width, initial-scale=1">
 <link rel="stylesheet" href="static/admin/css/menu.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="static/admin/css/Schools.css">
+<link rel="image" href="home/ArleneList/static">
 <style>
 table, td, th {
   border: 1px solid black;
@@ -35,45 +37,156 @@ body {
 /*Text container*/
 .myCont {
   background-color: white;
-  width: 908px;
+  width: 1200px;
   padding: 50px;
-  margin: 40px 250px 40px;
+  margin: 40px 200px 40px;
 
+}
+.menu a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: white;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 20%, 20%;
+}
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 4px;}}
+
+
+
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]:checked + label>img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px #090;
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type=radio] + label>img {
+  border: 1px dashed #444;
+  width: 150px;
+  height: 150px;
+  transition: 500ms all;
+}
+
+input[type=radio]:checked + label>img {
+  transform: 
+    rotateZ(-10deg) 
+    rotateX(10deg);
 }
 
 </style>
 </head>
+
 <body bgcolor= "lightblue">
-<div class="header"> 
-   <h1>SPECIALIZATION</h1>
+  <div class="header"> 
+   <h1><br></h1>
+  </div>
+<style="border:0px solid black>
+   <ul class="menu">
+       <li><a href="/EStudent.html"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H O M E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i></a>
+        <ul class="submenu">
+            <li><a href="/students.html"><i>Masterlist</i></a></li>
+            <li><a href="/requirement.html"><i>Requirements</i></a></li>
+            <li><a href="/specialization.html"><i>Specialization</i></a></li>
+            <li><a href="/schedule.html"><i>Schedule</i></a></li>
+        </ul></li>
+
+      <form class="gedaria"action="#" method="post">
+      {% csrf_token %}
+
 </div>
 </div>
 </div>
-  {% endfor %}
-</table>
 </center>
+<br>
+<br>
+
+
+
+<center><table>
+  <tr>
+    <th>✅ Report Card&nbsp;</th>
+    <th>✅ PSA&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table></center>
 
 <div Class="myCont">
-<center><div id="specialization">
-  
-   <input type ="radio" id="ict" name="ict" value="ict"required>ICT
-   <br>
-   <input type ="radio" id="cooker" name="cooker" value="cook"required>Cookery
-   <br>
-   <input type ="radio" id="tech" name="tech" value="techdraft"required>TechDraft
-   <br>
-   <input type ="radio" id="elect" name="electrical" value="electrical"required>Electrical
+<center>
 
-  </div><br><br>
-      <button><a href="shifts.html">Select</a></button>
-</center>
+   <h1>SPECIALIZATION</h1>
+   <br>
+<input 
+  type="radio" name="emotion" 
+  id="ict" class="input-hidden" />
+<label for="ict">
+  <img 
+    src="https://www.dummies.com/wp-content/uploads/453360.image0.jpg"
+    alt="Computer" />
+</label>
 
 
-</div></div>
+<input 
+  type="radio" name="emotion"
+  id="techdraft" class="input-hidden" />
+<label for="techdraft">
+  <img 
+    src="https://image.freepik.com/free-photo/drawing-tools-with-blueprints-roll-scheme_359031-8202.jpg" 
+    alt="techdraft" />
+</label>
+
+<input 
+  type="radio" name="emotion"
+  id="cookery" class="input-hidden" />
+<label for="cookery">
+  <img 
+    src="https://www.icae.edu.au/wp-content/uploads/2021/02/cook-iii.png" 
+    alt="cookery" />
+</label>
+
+
+<input 
+  type="radio" name="emotion"
+  id="electrical" class="input-hidden" />
+<label for="electrical">
+  <img 
+    src="https://frontzmechanical.com/wp-content/uploads/electrical-services.jpg" 
+    alt="electrical" />
+</label>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ICT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Technical Drafting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cookery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Electrical
+</p>
+      <br>
+         <br>
+
+      <button><a href="schedule.html" style="color:red;">Choose</a></button>
+</div>
+
+
+
+
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-14 w3-opacity w3-hover-opacity-off">
-  <a href="Estudent.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="/EStudent.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
@@ -83,6 +196,5 @@ body {
     <a href="https://www.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>  
   </div>
 </footer>
-
 </body>
 </html>

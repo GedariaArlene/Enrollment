@@ -38,12 +38,16 @@ def List(request):
 	abg = Student.objects.all().order_by('name')
 	return render(request,'students.html', {'abg': abg})
 
-
 def EditList(request, id):
 	abg = Student.objects.get(id=id)
 	context = {'abg':abg}
 	return render(request, 'update.html', context)
 
+def Requirements(request):
+	 # Image = Requirements.objects.create(
+	 # reportcard = request.POST['reportcard'],
+	 # psa = request.POST['psa'],)
+	return render(request,'requirement.html')
 
 def UpdateList(request, id):
 	abg = Student.objects.get(id=id)
@@ -56,47 +60,35 @@ def UpdateList(request, id):
 	abg.save ()
 	return redirect('students')
 
+def Specialization(request):
+	# specialz = Specialization.objects.create(
+	# specials = request.POST['specialization'],)
+	# return redirect('Sched')
+	return render(request,'specialization.html')
+
 def DeleteList(request, id):
 	abg = Student.objects.get(id=id)
 	abg.delete()
 	return redirect('students')
 
-
-
-
-
-def Requirements(request):
-
-	 # Image = Requirements.objects.create(
-
-	 # reportcard = request.POST['reportcard'],
-	 # psa = request.POST['psa'],)
-
-	return render(request,'requirement.html')
-
-
-def Specialization(request):
-
-	# specialz = Specialization.objects.create(
-
-	# specials = request.POST['specialization'],)
-
-	# return redirect('Sched')
-
-	return render(request,'specialization.html')
-
 def Modality(request):
 	# modal = Modality.objects.create()
 	return render(request,'modality.html')
 
-
 def Schedule(request):
-	# specialz = Specialization.objects.filter()
+    #specialz = Specialization.objects.filter()
 	return render(request,'schedule.html')
 
+def DeleteList(request, id):
+	abg = Student.objects.get(id=id)
+	abg.delete()
+	return redirect('students')
 
 def Done(request):
 	return render(request,'Done.html')
 
+def Home(request):
+	return render(request,'EStudent.html')
 
-
+def Masterlist(request):
+	return render(request,'students.html')

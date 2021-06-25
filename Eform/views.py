@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .models import Student, Requirements, ClassShift, Schedule, Specialization, StudentProfile
+from .models import Student, Requirements, Schedule, Specialization
+
+
 # Create your views here.
 
 
@@ -8,23 +10,24 @@ def EStudent(request):
 
 	if request.method == 'POST':
 
-		enroll = Student.objects.create()
 		Student.objects.create(
 			name = request.POST['name'], 
+			birthday = request.POST['birthday'],
+			age = request.POST['age'], 
+			address = request.POST['address'],
 			gradelevel = request.POST['gradelevel'],
 			lrn = request.POST['lrn'],
-			birthday = request.POST['birthday'], 
-			address = request.POST['address'],
 			)
 
 		return redirect('students')
 		
 		abg = Student()
 		abg.name = name
+		abg.birthday = birthday
+		abg.age = age
+		abg.address = address
 		abg.gradelevel = gradelevel
 		abg.lrn = lrn
-		abg.birthday = birthday
-		abg.address = address
 		abg.requirement = requirement
 		abg.save()
 
@@ -36,284 +39,53 @@ def List(request):
 	return render(request,'students.html', {'abg': abg})
 
 
-def Require(request):
+def Requirements(request):
+
+	 # Image = Requirements.objects.create(
+
+	 # reportcard = request.POST['reportcard'],
+	 # psa = request.POST['psa'],)
 
 	return render(request,'requirement.html')
 
-def Special(request):
+
+def Specialization(request):
+
+	# specialz = Specialization.objects.create(
+
+	# specials = request.POST['specialization'],)
+
+	# return redirect('Sched')
 
 	return render(request,'specialization.html')
 
-def Shift(request):
 
-	return render(request,'shifts.html')
-
-
-def Sched(request):
-
+def Schedule(request):
+	# specialz = Specialization.objects.filter()
 	return render(request,'schedule.html')
 
 
-
-
-
-
-'''
-def Requirements(request):
-
-	if request.method == 'POST':
-
-		require = Requirements.objects.create()
-		Requirements.objects.create(
-			reportcard = request.POST['reportcard'], 
-			psa = request.POST['psa'],
-			)
-
-		return redirect('students.html')
-
-		abg = Requirements()
-		abg.reportcard = reportcard
-		abg.psa = psa
-		abg.save()
-
-	return render(request,'students.html')
-
-def Page(request):
-
-	abg = Requirements.objects.all().order_by('reportcard')
-	return render(request,'requirement.html', {'abg': abg})
-
-
-
-
-def ClassShift(request):
-
-	if request.method == 'POST':
-
-		classshift = ClassShift.objects.create()
-		ClassShift.objects.create(
-			cshifts = request.POST['cshifts'], 
-			)
-
-		return redirect('schedule.html')
-
-		abg = ClassShift()
-		abg.cshifts = cshifts
-		abg.save()
-		
-	return render(request,'schedule.html')
-
-def Page(request):
-
-	abg = ClassShift.objects.all().order_by('cshifts')
-	return render(request,'schedule.html', {'abg': abg})
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-def Page(request):
-	#return render(request,'students.html')
-
-	#return render(request,'students.html', {'abg': abg})
-
-	abg = Item.objects.all().order_by('gradelevel')
-	return render(request,'students.html', {'abg': abg})'''
-
-
-
+def Done(request):
+	return render(request,'Done.html')
 
 '''
 
-def EStudent(request):
-
-	if request.method == 'POST':
-
-		enroll = Student.objects.create()
-		Student.objects.create(
-			name = request.POST['name'], 
-			gradelevel = request.POST['gradelevel'],
-			lrn = request.POST['lrn'],
-			birthday = request.POST['birthday'], 
-			address = request.POST['address'],
-			)
-
-		return redirect('students')
-
-def Fourth(request):
-
-	officerId=officer.objects.create(
-		firstname = request.POST['name'],
-		middle = request.POST['middle'],
-	)
-	return render(request,'.html')
-
-
-def Fifth(request):
-
-	resortId=Resort.objects.create(
-		resort = request.POST['resort'])
-
-	admitId=Admission.objects.create(
-		entrance = request.POST['entrance'],
-		admit = request.POST['admit'],
-		)
-
-	cottageId=Cottage.objects.create(
-		cottage = request.POST['cottage'])
-
-	return render(request,'receipt.html')'''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-def Student(request):
-
-
-	if request.method == 'POST':
-		return render(request,'Student.html')		
-
-		student = Student.objects.create()
-		StudentUser.objects.create(
-			gradelevel = request.POST['gradelevel'],
-			name = request.POST['name'], 
-			lrn = request.POST['lrn'],
-			birthday = request.POST['birthday'], 
-			address = request.POST['address'],
-			)
-		
-		return redirect('studentlist')
-			
-		vax = Student()
-		vax.gradelevel = gradelevel
-		vax.name = name
-		vax.lrn = lrn
-		vax.birthday = birthday
-		vax.address = address
-		vax.save()
-
-		return render(request,'Student')
-
-def Page(request):
-	#return render(request,'students.html')
-
-	#return render(request,'students.html', {'abg': abg})
-
-	vax = StudentUser.objects.all().order_by('gradelevel')
-	return render(request,'studentlist.html', {'vax': vax})'''
-
-
-
-'''
-	if request.method == 'POST':
-
-		enroll = User.objects.create()
-		Item.objects.create(
-			gradelevel = request.POST['gradelevel'],
-			name = request.POST['name'], 
-			lrn = request.POST['lrn'],
-			birthday = request.POST['birthday'], 
-			address = request.POST['address'],
-			)
-		return redirect('students')'''
-		
-
-
-'''
-#bagooooooooo
-def Requirement(request):
-
-	if request.method == 'POST':
-
-		require = Requirement.objects.create()
-		Item.objects.create(
-			reportcard = request.POST['reportcard'],
-			psa = request.POST['psa'], 
-			)
-		return redirect('requirement')
-		
-
-		abg = Item()
-		abg.reportcard = reportcard
-		abg.psa = psa
-		abg.save()
-
-	return render(request,'students.html')'''
-
-
-
-
-
-
-
-
-
-
-
-'''
-from django.shortcuts import redirect, render
-from .models import Item, User
-
-# Create your views here.
-def Omepage(request):
-
-	if request.method == 'POST':
-
-		enroll = User.objects.create()
-		Item.objects.create(
-			gradelevel = request.POST['gradelevel'],
-			name = request.POST['name'], 
-			lrn = request.POST['lrn'],
-			birthday = request.POST['birthday'], 
-			address = request.POST['address'],
-			)
-		return redirect('students')
-		
-
-		abg = Item()
-		abg.gradelevel = gradelevel
-		abg.name = name
-		abg.lrn = lrn
-		abg.birthday = birthday
-		abg.address = address
-		abg.save()
-
-	return render(request,'Omepage.html')
-
-def Page(request):
-	#return render(request,'students.html')
-
-	#return render(request,'students.html', {'abg': abg})
-
-	abg = Item.objects.all().order_by('gradelevel')
-	return render(request,'students.html', {'abg': abg})'''
+def edit(request, id):  
+    myfrm = Student.objects.get(id=id)  
+    return render(request,'students.html', {'myfrm':myfrm})  
+
+def update(request, id):  
+    myfrm = Student.objects.get(id=id)  
+    form = EmployeeForm(request.POST, instance = myfrm)  
+    if form.is_valid():  
+        form.save()  
+        return redirect("/students")  
+    return render(request, 'students.html', {'myfrm': myfrm}) 
+
+def destroy(request, id):  
+    myfrm = Student.objects.get(id=id)  
+    myfrm.delete()  
+    return redirect("/students")  '''
 
 
 

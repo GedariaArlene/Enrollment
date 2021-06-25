@@ -16,9 +16,10 @@ urlpatterns = [
 	url(r'^EditList/UpdateList/(?P<id>\d+)$', views.UpdateList, name="UpdateList"),
 	url(r'^DeleteList/(?P<id>\d+)$', views.DeleteList, name="DeleteList"),
 
-	# path('edit/<int:id>', views.edit),  
- #    path('update/<int:id>', views.update),  
- #    path('delete/<int:id>', views.destroy),
+	path('EStudent.html', views.Home, name="EStudent"),	
+	path('students.html', views.Masterlist, name="students"),	
 ]
 
-
+#path('edit/<int:id>', views.edit),  
+#path('update/<int:id>', views.update),  
+#path('delete/<int:id>', views.destroy),

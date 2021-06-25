@@ -11,13 +11,11 @@ footer {
   background-color: DarkSalmon;
   color: white;}
 
-
 /* Header */
 body {
   font-family: Arial;
   margin: 0;
 }
-
 /* Header/Logo Title */
 .header {
   padding: 15px;
@@ -27,241 +25,76 @@ body {
   font-size: 20px;
   font-family: Arial;}
 
-.menu, .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.menu {
-    height: 55px;
-}
-.menu li {
-    background: -moz-linear-gradient(#012C46, #025E95);
-    background: -ms-linear-gradient(#012C46, #025E95);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #C0C0C0));
-    background: -webkit-linear-gradient(#012C46, ##025E95);
-    background: -o-linear-gradient(#012C46, #025E95);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008080', endColorstr='#025E95');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='##990043', endColorstr='#025E95')";
-    background: linear-gradient(#012C46, #025E95);
-    border-bottom: 2px solid ##012C46;
-    border-top: 1px solid #012C46;
-    min-width: 1px;
-}
-.menu > li {
-    display: block;
-    float: left;
-    position: relative;
-}
-.menu > li:first-child {
-    border-radius: 2px 0 0;
-}
 .menu a {
     border-left: 3px solid rgba(0, 0, 0, 0);
     color: white;
     display: block;
     font-family: 'Lucida Console';
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 14px;
+    line-height: 30px;
     padding: 0 20px;
     text-decoration: none;
-    text-transform: uppercase;
-}
-
-.menu li:hover {
-    background-color: #1c1c1c;
-    background: -moz-linear-gradient(#1c1c1c, #1b1b1b);
-    background: -ms-linear-gradient(#1c1c1c, #1b1b1b);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1c1c), color-stop(100%, #1b1b1b));
-    background: -webkit-linear-gradient(#1c1c1c, #1b1b1b);
-    background: -o-linear-gradient(#1c1c1c, #1b1b1b);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b')";
-    background: linear-gradient(#1c1c1c, #1b1b1b);
-    border-bottom: 2px solid #222222;
-    border-top: 2px solid #1B1B1B;
-}
-.menu li:hover > a {
-    border-radius: 5px 0 0 0;
-    border-left: 3px solid gray;
-    color: white;
-}
-/* submenu styles */
-.submenu {
-    left: 0;
-    max-height: 0;
-    position: absolute;
-    top: 100%;
-    z-index: 0;
-    -webkit-perspective: 400px;
-    -moz-perspective: 400px;
-    -ms-perspective: 400px;
-    -o-perspective: 400px;
-    perspective: 400px;
-}
-.submenu li {
-    opacity: 0;
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-    -webkit-transition: opacity .4s, -webkit-transform .5s;
-    -moz-transition: opacity .4s, -moz-transform .5s;
-    -ms-transition: opacity .4s, -ms-transform .5s;
-    -o-transition: opacity .4s, -o-transform .5s;
-    transition: opacity .4s, transform .5s;
-}
-.menu .submenu li:hover a {
-    border-left: 3px light gray;
-    border-radius: 0;
-    color: #ffffff;
-}
-.menu > li:hover .submenu, .menu > li:focus .submenu {
-    max-height: 2000px;
-    z-index: 5;
-}
-.menu > li:hover .submenu li, .menu > li:focus .submenu li {
-    opacity: 1;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-}
-/* CSS3 delays for transition effects */
-.menu li:hover .submenu li:nth-child(1) {
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-}
-.menu li:hover .submenu li:nth-child(2) {
-    -webkit-transition-delay: 50ms;
-    -moz-transition-delay: 50ms;
-    -ms-transition-delay: 50ms;
-    -o-transition-delay: 50ms;
-    transition-delay: 50ms;
-}
-.menu li:hover .submenu li:nth-child(3) {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    -ms-transition-delay: 100ms;
-    -o-transition-delay: 100ms;
-    transition-delay: 100ms;
-}
-.menu li:hover .submenu li:nth-child(4) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms;
-}
-.menu li:hover .submenu li:nth-child(5) {
-    -webkit-transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -ms-transition-delay: 200ms;
-    -o-transition-delay: 200ms;
-    transition-delay: 200ms;
-}
-.submenu li:nth-child(1) {
-    -webkit-transition-delay: 350ms;
-    -moz-transition-delay: 350ms;
-    -ms-transition-delay: 350ms;
-    -o-transition-delay: 350ms;
-    transition-delay: 350ms;
-}
-.submenu li:nth-child(2) {
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    -ms-transition-delay: 300ms;
-    -o-transition-delay: 300ms;
-    transition-delay: 300ms;
-}
-.submenu li:nth-child(3) {
-    -webkit-transition-delay: 250ms;
-    -moz-transition-delay: 250ms;
-    -ms-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms;
-}
-.submenu li:nth-child(4) {
-    -webkit-transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -ms-transition-delay: 200ms;
-    -o-transition-delay: 200ms;
-    transition-delay: 200ms;
-}
-.submenu li:nth-child(5) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms;
-}
-<!--Hoverable Button-->
-<!--Client&Contact-->
-
-.button {
-  background-color: red; /* Green */
-  border: none;
-  color: red;
-  padding: none;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 2;
-  margin: 1px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  text-transform: lowercase;
-  font-family: 'Lucida Console';
-}
+    text-transform: uppercase;}
 
 
+
+style=type="text/css">
+#paymethod {
+width: 700px;
+border: 0px solid;
+font-family: "Century Gothic";
+font-size: 14px;
+}
 
 </style>
     </head>
 <body bgcolor= "lightblue">
 
 <div class="header"> 
-   <h1>ENROLLMENT </h1>
+   <h1>CLASS SCHEDULE </h1>
 </div>
- <br>
- <br>
  <style="border:0px solid black">
    <ul class="menu">
-       <li><a href="C:\Users\Home\Desktop\Webdev\Estudent.html"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H O M E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i></a>
+       <li><a href="/EStudent.html"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H O M E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i></a>
         <ul class="submenu">
-            <li><a href="home/arlene/ArleneList/Eform/Templates/students.html"><i>  Masterlist</i></a></li>
-            <li><a href="\home\arlene\ArleneList\Eform\Templates\requirements.html"><i> Requirements</i></a></li>
-            <li><a href="http://enrollment.ph/home/arlene/ArleneList/Eform/Templates/schedule.html"><i> Schedule </i></a></li>
-            <li><a href="\home\arlene\ArleneList\Eform\Templates\specilization.html"><i> Specilization </i></a></li>
-            <li><a href="\home\arlene\ArleneList\Eform\Templates\teacher.html"><i>  Teacher</i></a></li>
-            <li><a href="\home\arlene\ArleneList\Eform\Templates\sections.html"><i> Profile </i></a></li>
-            
+            <li><a href="/students.html"><i>Masterlist</i></a></li>
+            <li><a href="/requirement.html"><i>Requirements</i></a></li>
+            <li><a href="/specialization.html"><i>Specialization</i></a></li>
+            <li><a href="/schedule.html"><i>Schedule</i></a></li>
         </ul></li>
+<br><br><br>
 
- 
-<br>
 
+<center>
     <form method="post" action="" id="myfrm" >
-        <fieldset>
-            <legend>Your Schedule:</legend>
-            <center>First name:
-            <input type="text" name="firstname" id="fn">
-            &nbsp;&nbsp;&nbsp;Last name:
-            <input type="text" name="lastname" id="ln">
-            <br><br></center>
 
+<script>
+function toggleTables(which)
+{
+    if(which == "1") {
+        document.getElementById('customize').style.display = "table";
+        document.getElementById('standard').style.display = "none";
 
-    <table border="5" cellspacing="0" align="center"><br>
-        <!--<caption>Timetable</caption>-->
-        <tr>
+        }
+    if(which == "2") {
+        document.getElementById('standard').style.display = "table";
+        document.getElementById('customize').style.display = "none";
+        }
+}
+</script>
+
+<input name="checkbox1" type="checkbox" id="customize_1" onClick="toggleTables('2')" value="checkbox" />
+<label for="checkbox1"></label> FIRST SHIFT &nbsp;&nbsp;&nbsp;
+<input name="checkbox2" type="checkbox" id="customize_0" onClick="toggleTables('1')" value="checkbox" checked="checked" />
+SECOND SHIFT
+<br>
+<br>
+<br>
+<table width="70%" border="5" class="imagetable" cellpadding="0" cellspacing="0" id="customize">
+            <tr>
             <td align="center" height="50" 
                 width="100"><br>
-                <b>Day/Period</b></br>
+                <b>Afternoon</b></br>
             </td>
             <td align="center" height="50" 
                 width="100">
@@ -368,31 +201,157 @@ body {
                 height="50">SEMINAR
             </td>
             <td align="center" height="50">SPORTS</td>
-        </tr>
-    </table><br><br>
-			
+        </tr>                   
+</table>
 
-    <p align="center"><input type="button" onclick="myPrint('myfrm')" value="print"></p>
-    <button><a href="Estudent.html.html">Done</a></button>
+<table width="70%" border="5" class="imagetable" cellpadding="0" cellspacing="0" id="standard" style="display: none">
+            <tr>
+            <td align="center" height="50" 
+                width="100"><br>
+                <b>Morning</b></br>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>I<br>9:30-10:20</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>II<br>10:20-11:10</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>III<br>11:10-12:00</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>12:00-12:40</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>IV<br>12:40-1:30</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>V<br>1:30-2:20</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>VI<br>2:20-3:10</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>VII<br>3:10-4:00</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Monday</b></td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">Che</td>
+            <td rowspan="6" align="center" height="50">
+                <h2>L<br>U<br>N<br>C<br>H</h2>
+            </td>
+            <td colspan="3" align="center" 
+                height="50">LAB</td>
+            <td align="center" height="50">Phy</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Tuesday</b>
+            </td>
+            <td colspan="3" align="center" 
+                height="50">LAB
+            </td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">SPORTS</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Wednesday</b>
+            </td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">phy</td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td colspan="3" align="center" 
+                height="50">LIBRARY
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Thursday</b>
+            </td>
+            <td align="center" height="50">Phy</td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td colspan="3" align="center" 
+                height="50">LAB
+            </td>
+            <td align="center" height="50">Mat</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Friday</b>
+            </td>
+            <td colspan="3" align="center" 
+                height="50">LAB
+            </td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">Che</td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Phy</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Saturday</b>
+            </td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td align="center" height="50">Mat</td>
+            <td colspan="3" align="center" 
+                height="50">SEMINAR
+            </td>
+            <td align="center" height="50">SPORTS</td>
+        </tr>                   
+</table>
+</center>
+			
+<br>  
+<br>  
+    <p align="center"><input type="button" onclick="myPrint('myfrm')" value="Print|Save"></p>
+    <center><button><a href="Done.html" style="color:red;">Finish</a></button></center>
     <script>
         function myPrint(myfrm) {
             var printdata = document.getElementById(myfrm);
             newwin = window.open("");
             newwin.document.write(printdata.outerHTML);
             newwin.print();
-            newwin.close();
-        }
+            newwin.close();}
     </script>
-<br>   
-       
-</form>
-</fieldset>
+<br>       
+    </form>
 </center>
-
-
-
-
-
-
+</div></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-14 w3-opacity w3-hover-opacity-off">
+  <a href="/EStudent.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.snapchat.com/"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+    <a href="https://www.pinterest.ph/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>  
+  </div>
+</footer>
 </body>
 </html>
